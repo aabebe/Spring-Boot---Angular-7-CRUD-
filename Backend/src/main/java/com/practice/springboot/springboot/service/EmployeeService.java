@@ -10,5 +10,6 @@ public interface EmployeeService {
     List<Employee> getAllEmployees();
     Optional<Employee> findById(Long id);
     Employee save(Employee employee);
+    void delete(Employee employee);
 
 }
