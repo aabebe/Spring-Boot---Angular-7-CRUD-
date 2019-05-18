@@ -56,7 +56,7 @@ public class EmployeeController {
     public Map<String, Boolean> deletedEmployee(@PathVariable(value = "id") Long employeeId)
             throws ResourceNotFoundException {
         Employee employee = employeeService.findById(employeeId)
-                .orElseThrow(() -> new ResourceNotFoundException(("Employee not found for this id :: " + employeeId));
+                .orElseThrow(() -> new ResourceNotFoundException(("Employee not found for this id :: " + employeeId)));
         employeeService.delete(employee);
         Map<String, Boolean> response = new HashMap<>();
         response.put("deleted", Boolean.TRUE);
